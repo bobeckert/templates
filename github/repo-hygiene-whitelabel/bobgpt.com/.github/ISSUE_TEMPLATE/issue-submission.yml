@@ -1,0 +1,94 @@
+name: Issue submission
+description: File a structured issue for BobGPT content, UX, infrastructure, or site bugs.
+title: "[Issue]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing this. Please give enough context that someone can act on it without a long back-and-forth.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What needs attention?
+      description: A short description of the problem, request, or idea.
+      placeholder: The placeholder site needs a clearer next step or the Pages/domain setup is missing a required piece.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue type
+      description: Pick the closest fit.
+      options:
+        - Content update
+        - Design / layout
+        - Bug / broken behavior
+        - SEO / search visibility
+        - Analytics / tracking
+        - Infrastructure / deployment
+        - Feature request
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Affected page or file
+      description: Link the page URL or name the repo file/path if known.
+      placeholder: https://bobgpt.com/ or index.html
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: What is happening now?
+      description: Describe the current behavior, content, or experience.
+      placeholder: The domain does not resolve, the content is incomplete, or the page behavior does not match expectations.
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired_state
+    attributes:
+      label: What should happen instead?
+      description: Describe the expected outcome.
+      placeholder: The site should present the intended BobGPT direction clearly and the deployment path should work end to end.
+    validations:
+      required: true
+
+  - type: textarea
+    id: supporting_context
+    attributes:
+      label: Supporting context
+      description: Add screenshots, references, notes, audience context, or related links.
+      placeholder: Include examples, copy ideas, deployment notes, or linked issues.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: How will we know this issue is complete?
+      placeholder: |
+        - The requested change is visible in the intended place
+        - Links and copy are correct
+        - The deployment or domain behavior matches the intended standard
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Nice to have
+        - Useful soon
+        - Important
+        - Urgent
+    validations:
+      required: true

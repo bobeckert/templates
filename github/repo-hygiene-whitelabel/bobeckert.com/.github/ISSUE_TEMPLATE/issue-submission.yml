@@ -1,0 +1,93 @@
+name: Issue submission
+description: File a structured issue for content, design, UX, SEO, analytics, or site bugs.
+title: "[Issue]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing this. Please give enough context that someone can act on it without a long back-and-forth.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What needs attention?
+      description: A short description of the problem, request, or idea.
+      placeholder: The homepage CTA is unclear and should point visitors toward one primary next action.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue type
+      description: Pick the closest fit.
+      options:
+        - Content update
+        - Design / layout
+        - Bug / broken behavior
+        - SEO / search visibility
+        - Analytics / tracking
+        - Feature request
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Affected page or file
+      description: Link the page URL or name the repo file/path if known.
+      placeholder: https://bobeckert.com/ or index.html
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: What is happening now?
+      description: Describe the current behavior, content, or experience.
+      placeholder: Visitors land on the page, but the call to action is buried below the fold.
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired_state
+    attributes:
+      label: What should happen instead?
+      description: Describe the expected outcome.
+      placeholder: The hero should clearly direct visitors to booking, consulting, or another primary action.
+    validations:
+      required: true
+
+  - type: textarea
+    id: supporting_context
+    attributes:
+      label: Supporting context
+      description: Add screenshots, references, notes, affected audience, or related links.
+      placeholder: Include any examples, copy ideas, analytics notes, or linked issues.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: How will we know this issue is complete?
+      placeholder: |
+        - The CTA is visible without scrolling on desktop
+        - The button links to the correct destination
+        - Copy matches the approved tone
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Nice to have
+        - Useful soon
+        - Important
+        - Urgent
+    validations:
+      required: true
